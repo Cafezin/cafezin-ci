@@ -1,0 +1,6 @@
+.idea
+*.iml
+/cookbooks
+/tmp
+.librarian
+.kitchen
