@@ -32,8 +32,10 @@ jenkins_ssh_slave 'macslave' do
   user        'jenkins'
   credentials 'jenkins'
   environment(
-      PATH: '/usr/local/bin',
+      PATH: '/usr/local/bin:/usr/bin',
       DELIVER_USER: node[:slave_apple_id],
+      FASTLANE_USER: node[:slave_apple_id],
+      FASTLANE_PASSWORD: node[:slave_apple_password],
       DELIVER_PASSWORD: node[:slave_apple_password],
       LANG: 'en_US.UTF-8',
       LANGUAGE: 'en_US.UTF-8',
