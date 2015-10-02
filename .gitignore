@@ -1,6 +1,6 @@
 .idea
 *.iml
-/cookbooks
+/site-cookbooks/main/attributes/jenkins_slave_attributes.rb
 /tmp
 .librarian
 .kitchen
