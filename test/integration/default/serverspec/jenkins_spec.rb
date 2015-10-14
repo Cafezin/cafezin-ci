@@ -36,8 +36,7 @@ describe file('/var/lib/jenkins/jobs/Mobile/config.xml') do
   it { should exist }
   it { should contain 'hudson.plugins.git.GitSCM' }
   it { should contain 'hudson.triggers.SCMTrigger' }
-  it { should contain 'CODE_SIGN_IDENTITY'}
-  it { should contain 'CODE_SIGNING_REQUIRED=NO'}
-  it { should contain '<assignedNode>macslave</assignedNode>' }
+  it { should contain 'security unlock-keychain' }
+  it { should contain 'fastlane build' }
   it { should be_owned_by 'jenkins' }
 end
